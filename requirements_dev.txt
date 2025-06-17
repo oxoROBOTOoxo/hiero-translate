@@ -1,0 +1,6 @@
+black           # auto-formatter
+isort           # import-ordering
+flake8          # lightweight linter
+pre-commit      # run checks before each git commit
+pytest          # unit-test runner
+pytest-cov      # coverage report
