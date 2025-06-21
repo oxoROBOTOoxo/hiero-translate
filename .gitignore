@@ -25,3 +25,7 @@ __pycache__/
 #  LOCAL ENVIRONMENTS
 # -----------------------------
 envs/            
+
+# --- allow metadata CSVs in processed folder ---
+!data/processed/
+!data/processed/**/*.csv
