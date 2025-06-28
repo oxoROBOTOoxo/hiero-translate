@@ -12,3 +12,7 @@ returns transliteration and English translation.
 ```bash
 conda env create -f envs/environment.yml
 conda activate hiero
+
+### Egyptian Hieroglyphics Datasets  (Kaggle, waleedumer)
+* URL: https://kaggle.com/datasets/waleedumer/egyptian-hieroglyphics-datasets
+* ~12 000 PNG glyph crops, labelled with Gardiner codes.
