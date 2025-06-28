@@ -75,3 +75,13 @@ class GlyphDataModule(pl.LightningDataModule):
             persistent_workers=self.persistent,
             pin_memory=True,
         )
+
+    def val_dataloader(self):
+        return DataLoader(
+            self.val_ds,
+            batch_size=self.batch_size,
+            shuffle=False,
+            num_workers=self.num_workers,
+            persistent_workers=self.persistent,
+            pin_memory=True,
+        )

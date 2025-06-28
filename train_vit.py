@@ -30,14 +30,19 @@ def main():
 
     trainer = pl.Trainer(
         max_epochs=50,
-        log_every_n_steps=10,
+        log_every_n_steps=5,
         accelerator="gpu",
         devices=1,  # use a single GPU
+        enable_progress_bar=True,
         callbacks=[
             ModelCheckpoint(
-                dirpath="checkpoints", monitor="val_acc", mode="max", save_top_k=1
+                dirpath="checkpoints",
+                monitor="val_acc",
+                mode="max",
+                save_top_k=1,
+                save_last=True,
             ),
-            EarlyStopping(monitor="val_acc", mode="max", patience=5),
+            EarlyStopping(monitor="val_acc", mode="max", patience=5, verbose=True),
         ],
     )
 
